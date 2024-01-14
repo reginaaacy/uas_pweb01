@@ -1,0 +1,332 @@
+:root {
+  --background: #884a39;
+  --primary: ##f2ffe9;
+  --font: #f2ffe9;
+  --sekunder: #884a39;
+  --Order: #f2ffe9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(155, 82, 22);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(155, 82, 22);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 100px; */
+  background-color: black;
+  margin: auto;
+}
+
+.hero-judul span {
+  color: var(--primary);
+}
+.hero-judul {
+  height: 20rem;
+  width: 100%;
+  /* background-color: aqua; */
+  margin: auto;
+}
+.hero-section .hero-judul img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.hero-section .hero-judul {
+  font-size: 1rem;
+  text-align: center;
+}
+.hero-section .hero-judul h1 {
+  font-size: 3rem;
+}
+.hero-section .hero-judul p {
+  font-size: 1rem;
+}
+.hero-section .hero-judul .hero-button {
+  margin-top: 30px;
+}
+.hero-section .hero-judul .hero-button a {
+  background-color: var(--sekunder);
+  padding: 10px 20px;
+  border: 4px solid var(--kayu);
+  border-radius: 20px;
+  color: var(--font);
+}
+
+.hero-section .hero-judul .hero-button a:hover {
+  background-color: var(--kayu);
+  border: 4px solid var(--sekunder);
+  color: black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: repeat(auto-fit, minmax(500px, 1fr)); */
+  grid-gap: 20px;
+}
+
+.judul-product {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 30px;
+  color: var(--primary);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--kayu);
+}
+.card {
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  /* margin-left: 20px; */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-content {
+  padding: 30px;
+  padding-bottom: 20px;
+}
+
+.button-beli a {
+  background-color: var(--kayu);
+  margin-top: 100px;
+  padding: 3px;
+  font-size: 1rem;
+  color: black;
+  border-radius: 20px;
+  /* line-height: 2; */
+}
+.button-beli a:hover {
+  background-color: var(--sekunder);
+  color: white;
+  border: 1px solid var(--kayu);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+.card-content h2 {
+  color: var(--sekunder);
+}
+
+.card-content p {
+  font-weight: bold;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.judul-info h1 {
+  margin-top: 70px;
+  font-size: 5rem;
+  color: var(--primary);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--kayu);
+}
+.contact-info {
+  /* text-align: left; */
+  width: 500px;
+  height: 400px;
+  background-color: black;
+  font-size: 2rem;
+}
+.maps {
+  margin-left: -50px;
+}
+.container-footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100px;
+  background-color: var(--sekunder);
+  line-height: 2;
+}
+.judul-footer h4 {
+  color: var(--primary);
+  font-size: 2rem;
+}
+.judul-footer h5 {
+  font-size: 1rem;
+  color: black;
+}
+
+/* responsive */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--kayu);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .card img {
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  .info {
+    width: 100%;
+  }
+  .maps iframe {
+    width: 400px;
+    height: 300px;
+    margin-left: 50px;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .card img {
+    width: 80%;
+    margin-left: 32px;
+  }
+}
